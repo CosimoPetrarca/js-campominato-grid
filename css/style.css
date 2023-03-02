@@ -54,25 +54,31 @@ header {
  -----------*/
 main {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: aquamarine;
 }
 
 #griglia {
+    width: 600px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 #griglia div {
-    width: 30px;
-    height: 30px;
-    margin: 2px;
-    background-color: white;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
     border: 1px solid black;
     font-size: 14px;
     text-align: center;
     cursor: pointer;
+}
+
+.blue{
+    background-color: lightblue;
 }
 
 
