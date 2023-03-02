@@ -60,21 +60,25 @@ main {
     background-color: aquamarine;
 }
 
-#griglia {
+.griglia {
     width: 600px;
     height: 600px;
     display: flex;
     flex-wrap: wrap;
-    
+    display: none;
 }
 
-#griglia div {
+.griglia div {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
     font-size: 14px;
     text-align: center;
     cursor: pointer;
+}
+
+.show{
+    display: inherit;
 }
 
 .blue{
