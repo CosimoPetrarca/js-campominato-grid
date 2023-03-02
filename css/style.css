@@ -2,7 +2,7 @@
     Reset 
  -----------*/
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,46 +11,60 @@
 /*-----------
     Common 
  -----------*/
- body{
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
- }
+}
+
+img {
+    width: 10%;
+}
 
 /*-----------
     Header 
  -----------*/
- header{
-    background-color: aquamarine;
+header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     align-items: center;
- }
+}
 
- .left {
-    padding: 0 20px;
-  }
-  
-  .right {
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left h1 {
+    padding-left: 10px;
+}
+
+.right {
     margin-left: auto;
-  }
+}
 
- /*-----------
+.btn{
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+/*-----------
     Main 
  -----------*/
- main{
+main {
     flex-grow: 1;
- }
+    background-color: aquamarine;
+}
 
- #griglia {
+#griglia {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  }
-  
-  #griglia div {
+}
+
+#griglia div {
     width: 30px;
     height: 30px;
     margin: 2px;
@@ -59,13 +73,12 @@
     font-size: 14px;
     text-align: center;
     cursor: pointer;
-  }
-  
+}
 
- /*-----------
+
+/*-----------
     Footer 
  -----------*/
- footer{
-    background-color: lightcoral;
+footer {
     padding: 20px;
- }
+}
