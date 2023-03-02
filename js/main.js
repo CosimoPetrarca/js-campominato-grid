@@ -11,7 +11,7 @@ function createGameGrid() {
     const cell = document.createElement('div');
     // Aggiungo il numero della cella come testo all'interno della cella stessa
     cell.textContent = i;
-    // Aggiungo la cella alla griglia di gioco utilizzando il metodo append di JavaScript
+    // Aggiungo la cella alla griglia di gioco 
     gameGrid.append(cell);
 
     // Aggiungo un evento click a ogni cella di gioco
