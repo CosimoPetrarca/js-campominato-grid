@@ -7,3 +7,65 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*-----------
+    Common 
+ -----------*/
+ body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+ }
+
+/*-----------
+    Header 
+ -----------*/
+ header{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+ }
+
+ .left {
+    padding: 0 20px;
+  }
+  
+  .right {
+    margin-left: auto;
+  }
+
+ /*-----------
+    Main 
+ -----------*/
+ main{
+    flex-grow: 1;
+ }
+
+ #griglia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #griglia div {
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+
+ /*-----------
+    Footer 
+ -----------*/
+ footer{
+    background-color: lightcoral;
+    padding: 20px;
+ }
