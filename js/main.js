@@ -9,7 +9,7 @@ function creaCella(elemento, classe1, classe2, valore){
     elementoCreato.innerText = valore;
 
     elementoCreato.addEventListener('click', function(){
-        elementoCreato.classList.add('colors');
+        elementoCreato.classList.add('blue');
         alert(valore);
     })
 
@@ -43,8 +43,6 @@ function start(){
         }
     }
 
-    container.classList.add('display');
-    container.classList.remove('d-none'); 
 }
 
 // MAIN
