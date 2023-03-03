@@ -1,38 +1,56 @@
 'Use strict'
 
-// Seleziono l'elemento HTML con ID 
-const gameGrid = document.querySelector('.griglia');
+// FUNZIONI
+// Crea Cella
+function creaCella(elemento, classe1, classe2, valore){
+    const elementoCreato = document.createElement(elemento);
+    elementoCreato.classList.add(classe1);
+    elementoCreato.classList.add(classe2);
+    elementoCreato.innerText = valore;
 
-// Selezioniamo il bottone e la griglia
-let bottone = document.querySelector("button");
+    elementoCreato.addEventListener('click', function(){
+        elementoCreato.classList.add('colors');
+        alert(valore);
+    })
 
-// Quando il bottone viene cliccato, mostriamo la griglia
-bottone.addEventListener("click", function() {
-    let appairGriglia = document.querySelector('.griglia');
-    appairGriglia.classList.toggle('show');
-});
-
-// Definisco una funzione per creare la griglia di gioco
-function createGameGrid(colonne, righe) {
-    // Utilizzo un ciclo for per creare 100 celle di gioco
-    for (let i = 1; i <= colonne * righe; i++) {
-        // Creo un nuovo elemento div per ogni cella di gioco
-        const cell = document.createElement('div');
-        // Aggiungo il numero della cella come testo all'interno della cella stessa
-        cell.textContent = i;
-        // Aggiungo la cella alla griglia di gioco 
-        gameGrid.append(cell);
-
-        // Aggiungo un evento click a ogni cella di gioco
-        cell.addEventListener('click', function () {
-            const element = document.querySelector('.blue');
-            cell.classList.toggle('blue');
-            console.log(i);
-        });
-    }
-    return 
+    return elementoCreato;
+}
+// Appendi Cella
+function appendiCella(container, element){
+    container.append(element);
 }
 
-// Chiamiamo la funzione createGameGrid per creare la griglia di gioco
-createGameGrid(10, 10);
+// Crea Difficoltà
+function start(){
+    const difficult = document.querySelector(".difficult").value;
+    const scelta = difficult;
+    container.innerHTML = '';
+    
+    if(scelta === 'normal'){
+        for(let i = 1; i <= 81; i++){
+            const cella = creaCella('div', 'cella', 'normal', i);
+            appendiCella(container, cella);
+        }
+    } else if (scelta === 'hard'){
+        for(let i = 1; i <= 49; i++){
+            const cella = creaCella('div', 'cella', 'hard', i);
+            appendiCella(container, cella);
+        }
+    } else {
+        for(let i = 1; i <= 100; i++){
+            const cella = creaCella('div', 'cella', 'easy', i);
+            appendiCella(container, cella);
+        }
+    }
 
+    container.classList.add('display');
+    container.classList.remove('d-none'); 
+}
+
+// MAIN
+const container = document.querySelector(".griglia");
+const button = document.querySelector(".btn");
+
+
+// Pulsante Play
+button.addEventListener('click', start);
