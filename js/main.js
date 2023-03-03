@@ -13,9 +13,9 @@ bottone.addEventListener("click", function() {
 });
 
 // Definisco una funzione per creare la griglia di gioco
-function createGameGrid() {
+function createGameGrid(colonne, righe) {
     // Utilizzo un ciclo for per creare 100 celle di gioco
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 1; i <= colonne * righe; i++) {
         // Creo un nuovo elemento div per ogni cella di gioco
         const cell = document.createElement('div');
         // Aggiungo il numero della cella come testo all'interno della cella stessa
@@ -27,10 +27,12 @@ function createGameGrid() {
         cell.addEventListener('click', function () {
             const element = document.querySelector('.blue');
             cell.classList.toggle('blue');
-            alert(i);
+            console.log(i);
         });
     }
+    return 
 }
 
 // Chiamiamo la funzione createGameGrid per creare la griglia di gioco
-createGameGrid();
+createGameGrid(10, 10);
+
